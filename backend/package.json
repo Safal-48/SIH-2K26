@@ -1,0 +1,45 @@
+{
+  "name": "interop-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Cross-Department Service Interoperability & Orchestration Platform",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "db:setup": "node src/scripts/setupDatabase.js",
+    "db:seed": "node src/scripts/setupDatabase.js",
+    "db:reset": "node src/scripts/setupDatabase.js --reset",
+    "test:mock": "node src/scripts/testMockApis.js",
+    "test:connectors": "node src/scripts/testConnectors.js",
+    "test:mapper": "node src/scripts/testDataMapper.js",
+    "test:workflow": "node src/scripts/testWorkflowEngine.js",
+    "test:auth": "node src/scripts/testAuthRbacConsent.js",
+    "test:email-auth": "node src/scripts/testEmailAuth.js",
+    "test:lifecycle": "node src/scripts/testApplicationLifecycle.js",
+    "test:timeline": "node src/scripts/testUnifiedTimeline.js",
+    "test:admin": "node src/scripts/testAdminDashboard.js",
+    "test:exceptions": "node src/scripts/testExceptionRecovery.js",
+    "test:notifications": "node src/scripts/testNotificationsAndSla.js",
+    "test:builder": "node src/scripts/testWorkflowBuilder.js",
+    "test:step15": "node src/scripts/testStep15.js",
+    "test:step16": "node src/scripts/testStep16.js",
+    "test:step17": "node src/scripts/testStep17.js",
+    "test:all": "node src/scripts/runAllTests.js",
+    "demo": "node src/scripts/runJudgeDemo.js"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.5.8",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "pg": "^8.11.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
